@@ -62,6 +62,17 @@ class Body(object):
                 # core.Draw.line((255, 255, 255), self.position, self.position + self.acc * 100, 10)
 
                 self.acc = Vector2()
+                self.edge()
 
     def show(self):
         core.Draw.circle(self.color, self.position, self.mass)
+
+    def edge(self):
+        if self.position.x <=self.mass:
+            self.vitesse.x *= -1
+        if self.position.x+self.mass >= core.WINDOW_SIZE[0]:
+            self.vitesse.x *= -1
+        if self.position.y <= self.mass:
+            self.vitesse.y *= -1
+        if self.position.y +self.mass>= core.WINDOW_SIZE[1]:
+            self.vitesse.y *= -1
