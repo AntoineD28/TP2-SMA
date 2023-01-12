@@ -26,6 +26,7 @@ class Body(object):
 
         self.faim = 1
         self.fatigue = 1
+        self.tmpFatigue = 0
         self.reproduction = 1
 
         self.dateNaiss = time.time()
@@ -37,18 +38,18 @@ class Body(object):
         self.fustrum = Fustrum(30, self)
 
     def update(self):
-        self.fatigue += 0.7
-        self.faim += 0.1
+        self.fatigue += 0.5
+        #self.faim += 0.1
         if time.time() - self.dateNaiss > self.espVie:
             self.color = (255, 255, 255)
         elif self.faim > self.faimC:
             self.color = (255, 255, 255)
-        elif floor(self.fatigue) % self.fatigueC == 0:
-            self.color = (220, 220, 220)
+        elif floor(self.fatigue) % self.fatigueC == 0 and floor(self.tmpFatigue) != floor(self.fatigue):
+            self.tmpFatigue = floor(self.fatigue)
             self.isSleeping = not self.isSleeping
         else:
             if self.isSleeping == False:
-                self.reproduction += 0.1
+                self.reproduction += 1
                 self.color = self.colorTmp
                 if self.acc.length() > self.accMax / self.mass:
                     self.acc.scale_to_length(self.accMax / self.mass)

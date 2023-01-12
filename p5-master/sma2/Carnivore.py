@@ -7,7 +7,7 @@ from Decomposeur import Decomposeur
 
 class Carnivore(Agent):
     def __init__(self):
-        Agent.__init__(self, Body(2, 11, 10, 10, 10, 20, (0, 0, 255)))
+        Agent.__init__(self, Body(2, 11, 100, 100, 100, 20, (0, 0, 255)))
 
     def filtrePerception(self):
         manger = []

@@ -6,7 +6,7 @@ from Decomposeur import Decomposeur
 
 class SuperPred(Agent):
     def __init__(self):
-        Agent.__init__(self, Body(3, 12, 50, 50, 100, 120, (255, 0, 0)))
+        Agent.__init__(self, Body(3, 12, 100, 100, 100, 120, (255, 0, 0)))
 
     def filtrePerception(self):
         manger = []
