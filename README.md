@@ -4,9 +4,12 @@ La tp se trouve dans le dossier "sma2".
 
 Code couleur :
 
-* Superprédateur => rouge
-* Carnivore => bleu
-* Décomposeur =>
-* Herbivore => 
-* Végétaux => vert
+* Superprédateur => Rouge
+* Carnivore => Bleu
+* Décomposeur => Gris
+* Herbivore => Vert kaki
+* Végétaux => Vert
+
+* Mort => Blanc
+* Dormir => Blanc 
 
