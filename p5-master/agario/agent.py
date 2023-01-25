@@ -11,10 +11,10 @@ from body import Body
 
 class Agent(object):
     def __init__(self, body):
-        self.body=body
-        self.uuid=random.randint(100000,999999999)
-        self.coefObs=100
-        self.coefCreep=.01
+        self.body = body
+        self.uuid = random.randint(100000,999999999)
+        self.coefObs = 100
+        self.coefCreep = .01
 
 
     def filtrePerception(self):
